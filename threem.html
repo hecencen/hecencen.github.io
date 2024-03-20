@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>体积计算器</title>
+        <link rel="shortcut icon" href="https://ts4.cn.mm.bing.net/th?id=ODLS.2d8f99b9-7bcb-4f0f-be03-922d3eb10c83&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2">
+    </head>
+    <body>
+        <script>
+            var m3 = 0
+            async function add(){
+                var chang=document.getElementById(`long`).value
+                var rs=document.getElementById(`rst`).value
+                m3=1.2*3.14159265358979323846*chang*rs*rs
+                var display = document.getElementById("usd");
+                display.textContent = `${m3}cm³（立方厘米）,祝您身体健康`
+
+            }
+            async function cop(){
+
+
+                try {
+                    await navigator.clipboard.writeText(m3+`(本结果由体积计算器计算，无医学参考价值)`);
+                    alert(`复制成功`)
+                } catch (err) {
+                    alert(`复制失败`)
+                }
+
+            }
+        </script>
+        <div style="position: absolute; top: 0px; right: 0px; width: 100%; z-index: 2147483647;"><style>
+            .asquaere {
+                border-top: rgba(130, 130, 130, 1) solid 4px !important;
+                border-bottom: rgba(120, 120, 120, 1) solid 6px !important;
+                border-left: rgba(117, 117, 117, 1) solid 5px !important;
+                border-right: rgba(120, 120, 120, 1) solid 5px !important;
+                border-radius: 15px 15px 15px 15px;
+                outline: rgba(186, 186, 186, 1) dashed 2px;
+                box-shadow: 3px 3px 7px 5px rgba(232, 232, 232, 0.09) inset;
+                margin: auto auto auto auto;
+                width: 371px !important;
+                height: 200px !important;
+                float: none;
+                cursor: move;
+                color: rgb(255, 255, 255);
+                font-style: normal;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: auto;
+                text-align: center;
+            }
+            .squaere {
+                border-top: rgba(130, 130, 130, 1) solid 4px !important;
+                border-bottom: rgba(120, 120, 120, 1) solid 6px !important;
+                border-left: rgba(117, 117, 117, 1) solid 5px !important;
+                border-right: rgba(120, 120, 120, 1) solid 5px !important;
+                border-radius: 15px 15px 15px 15px;
+                outline: rgba(186, 186, 186, 1) dashed 2px;
+                box-shadow: 3px 3px 7px 5px rgba(232, 232, 232, 0.09) inset;
+                margin: auto auto auto auto;
+                width: 371px !important;
+                height: 382px !important;
+                float: none;
+                cursor: move;
+                color: rgb(255, 255, 255);
+                font-style: normal;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: auto;
+                text-align: center;
+            }
+            .fs {
+                background-color: rgba(173, 173, 173, 1);
+                margin: -300px 0 1px 20px;
+                border-radius: 15px 15px 15px 15px;
+                border: rgba(110, 110, 110, 1) dotted 3px;
+                width: 184px !important;
+                height: 27px !important;
+                color: rgba(255, 255, 255, 1);
+                font-size: 17px;
+                text-align: center;
+                font-weight: bold;
+            }
+            body {
+                background-color: rgb(81, 81, 81);
+            }
+            .title {
+                color: rgba(255, 255, 255, 1);
+                font-weight: bold;
+        
+            }
+            .titlesecond {
+                color: rgba(255, 255, 255, 1);
+                font-weight: bold;
+                font-size: 23px;
+            }
+            .titlethird {
+                color: rgb(207, 233, 245);
+                font-weight: bold;
+                font-size: 15px;
+            }
+            .titlethirdq {
+                color: rgb(207, 233, 245);
+                font-weight: bold;
+                font-size: 15px;
+                text-align: center;
+            }
+            .menu1 {
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 1);
+            }
+            .answer {
+                margin: -200px 0 0 10px;
+                background-color: rgba(171, 171, 171, 1);
+                border: rgba(110, 110, 110, 1) solid 1px;
+                border-radius: 15px 15px 15px 15px;
+                outline: rgb(255, 255, 255, 1) dashed 5px;
+                font-size: 30px;
+                color: rgba(255, 255, 255, 1);
+                cursor: pointer;
+            }
+        </style></div>
+        
+        <div class="squaere">体积计算器<br>
+            <span class="titlethird">请输入长度</span><input type="number" id="long" class="fs" placeholder="" value="请输入长度"><span class="titlethird">cm</span><br>
+            <span class="titlethird">请输入底面半径</span><input type="number" id="rst" class="fs" placeholder="" value="请输入底面半径"><span class="titlethird">cm</span><br><br><br><br>
+            <input type="submit" name="button" value="计算" class="answer" onclick="add()">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="asquaere">您的体积约为<br>
+            <span class="titlethird" id="usd"></span><br><br>
+            <input type="submit" name="button" value="复制结果" class="answer" onclick="cop()">
+        </div>
+       
+        <footer>
+            <p class="titlethirdq">版权所有 © 2024 体积计算器</p>
+            <p class="titlethirdq">本程序采用h某的高级算法计算</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>登入</title>
+        <link rel="shortcut icon" href="https://ts4.cn.mm.bing.net/th?id=ODLS.2d8f99b9-7bcb-4f0f-be03-922d3eb10c83&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2">
+    </head>
+    <body>
+        <script>
+            async function login(){
+                var pass=document.getElementById(`pass`).value
+                if(pass==54188){
+                    console.log(pass)
+                    window.location.href="threem.html"
+                }else{
+                    alert(`嘘！秘密！（密钥错误）`)
+                }
+
+            }
+        </script>
+        <div style="position: absolute; top: 0px; right: 0px; width: 100%; z-index: 2147483647;"><style>
+            .asquaere {
+                border-top: rgba(130, 130, 130, 1) solid 4px !important;
+                border-bottom: rgba(120, 120, 120, 1) solid 6px !important;
+                border-left: rgba(117, 117, 117, 1) solid 5px !important;
+                border-right: rgba(120, 120, 120, 1) solid 5px !important;
+                border-radius: 15px 15px 15px 15px;
+                outline: rgba(186, 186, 186, 1) dashed 2px;
+                box-shadow: 3px 3px 7px 5px rgba(232, 232, 232, 0.09) inset;
+                margin: auto auto auto auto;
+                width: 371px !important;
+                height: 120px !important;
+                float: none;
+                cursor: move;
+                color: rgb(255, 255, 255);
+                font-style: normal;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: auto;
+                text-align: center;
+            }
+            .squaere {
+                border-top: rgba(130, 130, 130, 1) solid 4px !important;
+                border-bottom: rgba(120, 120, 120, 1) solid 6px !important;
+                border-left: rgba(117, 117, 117, 1) solid 5px !important;
+                border-right: rgba(120, 120, 120, 1) solid 5px !important;
+                border-radius: 15px 15px 15px 15px;
+                outline: rgba(186, 186, 186, 1) dashed 2px;
+                box-shadow: 3px 3px 7px 5px rgba(232, 232, 232, 0.09) inset;
+                margin: auto auto auto auto;
+                width: 371px !important;
+                height: 382px !important;
+                float: none;
+                cursor: move;
+                color: rgb(255, 255, 255);
+                font-style: normal;
+                font-size: 30px;
+                font-weight: bold;
+                line-height: auto;
+                text-align: center;
+            }
+            .fs {
+                background-color: rgba(173, 173, 173, 1);
+                margin: -300px 0 1px 20px;
+                border-radius: 15px 15px 15px 15px;
+                border: rgba(110, 110, 110, 1) dotted 3px;
+                width: 184px !important;
+                height: 27px !important;
+                color: rgba(255, 255, 255, 1);
+                font-size: 17px;
+                text-align: center;
+                font-weight: bold;
+            }
+            body {
+                background-color: rgb(81, 81, 81);
+            }
+            .title {
+                color: rgba(255, 255, 255, 1);
+                font-weight: bold;
+        
+            }
+            .titlesecond {
+                color: rgba(255, 255, 255, 1);
+                font-weight: bold;
+                font-size: 23px;
+            }
+            .titlethird {
+                color: rgb(207, 233, 245);
+                font-weight: bold;
+                font-size: 15px;
+            }
+            .titlethirdq {
+                color: rgb(207, 233, 245);
+                font-weight: bold;
+                font-size: 15px;
+                text-align: center;
+            }
+            .menu1 {
+                font-size: 16px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 1);
+            }
+            .answer {
+                margin: -200px 0 0 10px;
+                background-color: rgba(171, 171, 171, 1);
+                border: rgba(110, 110, 110, 1) solid 1px;
+                border-radius: 15px 15px 15px 15px;
+                outline: rgb(255, 255, 255, 1) dashed 5px;
+                font-size: 30px;
+                color: rgba(255, 255, 255, 1);
+                cursor: pointer;
+            }
+        </style></div>
+        
+        <div class="asquaere">登入<br>
+            <span class="titlethird">请输入密钥</span><input type="number" id="pass" class="fs" placeholder="" value="请输入密钥"><span class="titlethird"></span><br><br><br><br>
+            <input type="submit" name="button" value="登录" class="answer" onclick="login()">
+        </div>
+       
+        <footer>
+            <p class="titlethirdq">版权所有 © 2024 h何某某</p>
+        </footer>
+    </body>
+</html>
