@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <title>智能英语学习Bot-Web</title>
+    <link rel="shortcut icon" href="https://ts4.cn.mm.bing.net/th?id=ODLS.2d8f99b9-7bcb-4f0f-be03-922d3eb10c83&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2">
+    <style>
+        #position_demo {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+        }
+        .square_button{
+            background-color: rgb(0, 103, 184);
+            color:white;
+            height: 35px;
+            width: 250px;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          .unopen_square_button{
+            background-color: rgb(110, 110, 110);
+            color:white;
+            height: 35px;
+            width: 250px;
+            border: none;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: not-allowed;
+          }
+    </style>
+    <script>
+        function downloadFile(url, fileName) {
+          var a = document.createElement("a");
+          a.href = url; 
+          a.download = fileName; 
+          document.body.appendChild(a); 
+          a.click(); 
+          document.body.removeChild(a); 
+        }
+    </script>
+</head>
+<body>
+    <h1>智慧英语学习Bot</h1>
+    <h2>欢迎使用，请选择使用方式</h2>
+    <button class="unopen_square_button">下载Windows程序包Beta(暂未开放)</button><br><br>
+    <button class="square_button" onclick="downloadFile('./智慧英语学习助手Android.apk', '智慧英语学习助手Android.apk');">下载Android程序包Beta(APK)</button><br><br>
+    <button class="square_button" onclick="alert(`点击页面右下角图标调起窗口`)">在线使用I（无需下载）</button><br><br>
+    <button class="square_button" onclick="window.location.href='https://www.coze.cn/store/bot/7395795029631107081?panel=1&bid=6d8pbl7ko8g16'">在线使用II（无需下载）</button><br><br>
+    <button class="unopen_square_button">下载IOS程序包(暂未开放)</button><br><br>
+    <div id="position_demo"></div>
+    <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/cn/index.js"></script>
+    <script>
+        const bot_id = '7388139453988716563';
+        const title = 'AI英语学习助手';
+        const icon = 'https://ts4.cn.mm.bing.net/th?id=ODLS.2d8f99b9-7bcb-4f0f-be03-922d3eb10c83&amp;w=32&amp;h=32&amp;qlt=90&amp;pcl=fffffa&amp;o=6&amp;pid=1.2';
+        const lang = 'zh-CN';
+        const layout = 'phone';
+        const width = 800;
+    
+        new CozeWebSDK.WebChatClient({
+            config: {
+                bot_id,
+            },
+            componentProps: {
+                title,
+                icon,
+                width,
+            },
+            el: document.getElementById('position_demo'),
+        });
+    </script>
+    </body>
+</html>
